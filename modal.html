@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Motion Blur Effect with SVG  | Modal Window</title>
+		<meta name="description" content="Motion blur effect for HTML elements using SVG filters" />
+		<meta name="keywords" content="motion blur, html, css, svg, filter, javascript, web design, dialog, modal window" />
+		<meta name="author" content="Lucas Bebber for Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/modal.css" />
+		<!--[if IE]>
+  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<script src="js/TweenMax.min.js"></script>
+		<script src="js/jquery.min.js"></script>
+	</head>
+	<body>
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="filters hidden">
+			<defs>
+				<filter id="blur">
+					<feGaussianBlur in="SourceGraphic" stdDeviation="0,0" />
+				</filter>
+			</defs>
+		</svg>
+		<div class="container">
+			<header class="codrops-header">
+				<div class="codrops-links">
+					<a class="codrops-icon codrops-icon--prev" href="http://tympanus.net/Tutorials/PrismEffectSlider/" title="Previous Demo"><span>Previous Demo</span></a>
+					<a class="codrops-icon codrops-icon--drop" href="http://tympanus.net/codrops/?p=23824" title="Back to the article"><span>Back to the Codrops article</span></a>
+				</div>
+				<h1>Motion Blur Effect with SVG  <span>by <a href="http://twitter.com/lucasbebber">Lucas Bebber</a></span></h1>
+				<nav class="codrops-demos">
+					<a href="index.html">Image Gallery</a>
+					<a class="current-demo" href="modal.html">Modal</a>
+					<a href="menu.html">Menu</a>
+				</nav>
+			</header>
+			<div class="content">
+				<button class="open-modal">Open Modal</button>
+			</div>
+			<!-- Related demos -->
+			<section class="content content--related">
+				<p><strong>If you enjoyed this demo you might also like:</strong></p>
+				<a class="media-item" href="http://tympanus.net/Development/CreativeGooeyEffects/">
+					<img class="media-item__img" src="img/related/CreativeGooeyEffects.png">
+					<h3 class="media-item__title">Creative Gooey Effects</h3>
+				</a>
+				<a class="media-item" href="http://tympanus.net/Development/ElasticSVGElements/">
+					<img class="media-item__img" src="img/related/MorphingShapeEffects.jpg">
+					<h3 class="media-item__title">Elastic SVG Elements</h3>
+				</a>
+			</section>
+			<div class="modal-overlay"></div>
+			<div class="modal-wrapper">
+				<div class="modal js-blur">
+					<button class="close-modal">×</button>
+					<h2>Tunguska event</h2>
+					<p>Across the centuries venture another world, ship of the imagination, corpus callosum from which we spring, hydrogen atoms?</p>
+				</div>
+			</div>
+		</div><!-- /container -->
+		<script src="js/motionblur.js"></script>
+		<script src="js/modal.js"></script>
+	</body>
+</html>
