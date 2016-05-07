@@ -96,6 +96,23 @@ $(document).ready(function() {
     		dragPos.x=event.pageX;
     	}
     });
+    $(document).keydown(function(e) {
+        var total = $(".gallery-picture").length - 1;
+        switch(e.which) {
+            case 37://left
+                var _currentImage=Math.round(-galleryPos.x/imageTotalWidth);
+                var prevImage = _currentImage - 1 <= 0 ? 0 : _currentImage - 1;
+                if(Math.abs(totalDist)<distThreshold)
+                    setGalleryPos(prevImage);
+                 break;
+            case 39://right
+                var _currentImage=Math.round(-galleryPos.x/imageTotalWidth);
+                var nextImage = _currentImage + 1 >= total ? total : _currentImage + 1;
+                if(Math.abs(totalDist)<distThreshold)
+                    setGalleryPos(nextImage);
+                break;
+        }
+    })
     function updateGalleryPosLoop(){
     	if(dragging){
     		updateGalleryPos();
