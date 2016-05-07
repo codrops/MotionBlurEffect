@@ -88,7 +88,11 @@ $(document).ready(function(){
 		}
 	}
 	$menuToggle.click(function(){
-		toggleMenu();
+		$menuToggle.prop('disabled', true);
+		setTimeout(function(){
+			toggleMenu();
+			$menuToggle.prop('disabled', false);
+		}, 150);
 	});
 	$(".js-blur").initBlur();
 
